@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { UsersService } from '../users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -7,10 +9,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  @Input() users;
+
+  constructor(private UserService: UsersService, private route: Router) { }
 
   ngOnInit() {
     
   }
+  validar($id){
+    this.UserService.valideUser($id).then(()=>{      
+      this.route.navigateByUrl('validar');
+    })
 
+  }
 }

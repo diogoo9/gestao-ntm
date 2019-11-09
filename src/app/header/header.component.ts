@@ -19,4 +19,7 @@ export class HeaderComponent implements OnInit {
   go(){
     this.route.navigateByUrl('users');
   }
+  login(){
+    this.route.navigateByUrl('login');
+  }
 }

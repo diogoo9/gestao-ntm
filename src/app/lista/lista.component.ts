@@ -8,8 +8,7 @@ import { UsersService } from '../users.service';
 })
 export class ListaComponent implements OnInit {
 
-  users: any = [];
-  @Input() usersParams;
+  users: any = [];  
   constructor(private UserService: UsersService) { }
 
   ngOnInit() {

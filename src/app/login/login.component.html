@@ -1,0 +1,19 @@
+<div class="login">
+    <div [formGroup]="loginForm" class="example-container">
+        <mat-form-field>
+            <input matInput placeholder="nome" formControlName="email">
+            <mat-error *ngIf="loginForm.get('email').errors && loginForm.get('email').touched">
+                {{loginForm.get('email').errors.message}}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail" formControlName="password" >
+            <mat-error *ngIf="loginForm.get('password').errors && loginForm.get('password').touched">
+                {{loginForm.get('password').errors.message}}
+            </mat-error>
+        </mat-form-field>
+
+        <button class="btn btn-dark btn-lg btn-block" [disabled]="loginForm.invalid" (click)="login()">Login</button>
+    </div>
+</div>

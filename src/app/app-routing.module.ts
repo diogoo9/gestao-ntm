@@ -3,13 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListaComponent } from './lista/lista.component';
 import { TableUsersComponent } from './table-users/table-users.component';
 import { RegistarComponent } from './registar/registar.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
   {
     path:'',
-    //component:ListaComponent
-    component:RegistarComponent
+    component:LoginComponent
+    //component:RegistarComponent
   },
   {
     path:'users',
@@ -18,6 +19,12 @@ const routes: Routes = [
   {
     path:'registrar',
     component:RegistarComponent
+  },{
+    path:'login',
+    component:LoginComponent
+  },{
+    path:'validar',
+    component:ListaComponent
   }
 ];
 

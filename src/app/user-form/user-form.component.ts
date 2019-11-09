@@ -18,7 +18,8 @@ export class UserFormComponent implements OnInit {
     this.registrarForm = new FormGroup({  
       'name':new FormControl(null,[ValidateRequired]),
       'email':new FormControl(null,[ValidateRequired, ValidateEmail.valid]),
-      'cpf':new FormControl(null,[ValidateRequired])
+      'cpf':new FormControl(null,[ValidateRequired]),
+      'skill':new FormControl(null,[ValidateRequired])
     });
 
     

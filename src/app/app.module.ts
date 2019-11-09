@@ -17,6 +17,8 @@ import { ListaComponent } from './lista/lista.component';
 import { RegistarComponent } from './registar/registar.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { MatCardModule } from '@angular/material';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { MatCardModule } from '@angular/material';
     CardComponent, 
     ListaComponent, 
     RegistarComponent, 
-    UserFormComponent,
+    UserFormComponent, LoginComponent,
     
   ],
   imports: [
@@ -40,6 +42,7 @@ import { MatCardModule } from '@angular/material';
     FormsModule,
     HttpClientModule,
     CustomMaterialModule,
+    NgbModule
     
   ],
   providers: [

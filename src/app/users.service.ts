@@ -12,11 +12,11 @@ export class UsersService {
     return this.http.get('http://127.0.0.1:8000/api/users').toPromise();
   }
 
-  saveUser(usuario){
-    return this.http.post('http://127.0.0.1:8000/api/users',usuario).toPromise();
+  saveUser(user){
+    return this.http.post('http://127.0.0.1:8000/api/users',user).toPromise();
   }
 
-  valideUser(){
-
-  }
+  valideUser($id){
+    return this.http.put(`http://127.0.0.1:8000/api/users/${$id}`,{status:1}).toPromise();
+   }
 }
