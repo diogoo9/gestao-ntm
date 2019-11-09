@@ -1,0 +1,14 @@
+<table id="customers">
+    <tr>
+      <th>Nome</th>
+      <th>data de registro</th>
+      <th>status</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{user.name}}</td>
+      <td>Maria Anders</td>
+      <td *ngIf="user.status">ativo</td>
+      <td *ngIf="!user.status">inativo</td>
+    </tr>
+    
+  </table>
