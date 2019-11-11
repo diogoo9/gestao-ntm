@@ -1,14 +1,20 @@
-
 <h2 *ngIf="users.lentgh == 0"> nada cadastrado</h2>
-<div *ngFor="let user of users">
-    <mat-card class="example-card">
-        <mat-card-header>
+
+
+<div *ngFor="let user of users" style="float: left;">
+    <mat-card class="example-card" style="width: 250px;margin: 5px;">
+        <mat-card-header style="border-left: 1px solid black;">
             <mat-card-title>{{user.name}}</mat-card-title>
             <mat-card-subtitle>{{user.created_at}}</mat-card-subtitle>
         </mat-card-header>
+        <br>
+        <h5>Compentências</h5>
+        <mat-card-content style="height:80px;overflow:auto;">
+            <li *ngFor="let skill of user.skills ">{{skill.description}}</li>
+        </mat-card-content>
         <mat-card-actions>
-            <button mat-button class="btn btn-dark" *ngIf="!user.status" (click)="validar(user.id)">Validar</button>
-            <button mat-button class="btn btn-dark" *ngIf="user.status" disabled>Validado</button>
+            <button mat-button class="btn btn-primary" *ngIf="!user.status" (click)="validar(user.id)">Validar</button>
+            <button mat-button class="btn btn-primary" *ngIf="user.status" disabled>Validado</button>
         </mat-card-actions>
     </mat-card>
     <br>

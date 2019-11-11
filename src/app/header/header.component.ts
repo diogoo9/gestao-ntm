@@ -9,17 +9,25 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   @Input() title;
-
+  valid = false;
   constructor(private route: Router) { }
 
   ngOnInit() {
     this.title = "diogo";
+    let a = sessionStorage.getItem('email');
+    if(a){
+      this.valid = true;
+    }
   }
 
   go(){
     this.route.navigateByUrl('users');
   }
   login(){
+    this.route.navigateByUrl('login');
+  }
+  logout(){
+    sessionStorage.setItem('email','')
     this.route.navigateByUrl('login');
   }
 }

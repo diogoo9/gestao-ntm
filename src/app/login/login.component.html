@@ -8,7 +8,7 @@
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="E-mail" formControlName="password" >
+            <input matInput placeholder="senha" type="password" formControlName="password" >
             <mat-error *ngIf="loginForm.get('password').errors && loginForm.get('password').touched">
                 {{loginForm.get('password').errors.message}}
             </mat-error>
